@@ -135,6 +135,20 @@
     document.getElementById("age_block").textContent = age;
   });
 
+  /* Independent Years in IT calculation */
+  window.addEventListener("load", () => {
+    let today = new Date().getFullYear();
+    let startdate = 2019;
+    let yearstotal = today - startdate;
+    new PureCounter({
+      selector: "#year-counter",
+      start: 0,
+      end: yearstotal,
+      duration: 1
+    });
+  });
+
+
   /* Portfolio isotope and filter */
   window.addEventListener("load", () => {
     let portfolioContainer = select(".portfolio-container");
@@ -181,4 +195,5 @@
   });
 
   new PureCounter();
+  
 })();
